@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/wire2coder/Deploying-Machine-Learning-Microservice-API/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/wire2coder/Deploying-Machine-Learning-Microservice-API/tree/master)
 
 ## Project Overview
 
