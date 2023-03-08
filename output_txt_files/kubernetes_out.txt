@@ -1,0 +1,35 @@
+<paste log output from Kubernetes-mediated prediction, here>
+
+(.devops) voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ kubectl get pods
+NAME           READY   STATUS              RESTARTS   AGE
+microproject   0/1     ContainerCreating   0          26s
+(.devops) voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ 
+(.devops) voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ 
+(.devops) voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ 
+(.devops) voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ kubectl get pods
+NAME           READY   STATUS    RESTARTS   AGE
+microproject   1/1     Running   0          2m25s
+(.devops) voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh 
+Error from server (AlreadyExists): pods "microproject" already exists
+NAME           READY   STATUS    RESTARTS   AGE
+microproject   1/1     Running   0          2m30s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+
+
+voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+
+
+(.devops) voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ minikube delete
+* Deleting "minikube" in docker ...
+* Deleting container "minikube" ...
+* Removing /home/ubuntu/.minikube/machines/minikube ...
+* Removed all traces of the "minikube" cluster.
+(.devops) voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ 
